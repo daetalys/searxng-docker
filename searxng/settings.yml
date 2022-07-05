@@ -2,10 +2,49 @@
 use_default_settings: true
 server:
   # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
-  secret_key: "ultrasecretkey"  # change this!
-  limiter: true  # can be disabled for a private instance
+  secret_key: "a269e2acef428b1869f1d8534afb305429ac157b45b9e93cafc8d3aa5b7a9d0c"  # change this!
+  limiter: false  # can be disabled for a private instance
   image_proxy: true
+  method: "GET"
+  default_http_headers:
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode-block
+    X-Download-Options: noopen
+    X-Robots-Tag: noindex, nofollow
+    Referrer-Policy: no-referrer
 ui:
   static_use_hash: true
+  query_in_title: false
+  default_theme: simple
+  center_alignment: true
+  theme_args:
+    simple_style: dark
+  results_on_new_tab: true
+categories_as_tabs:
+  general:
+  images:
+  videos:
+  news:
+  map:
+  music:
+  it:
+  science:
+  files:
+  social media:
 redis:
   url: redis://redis:6379/0
+brand:
+  issue_url: https://github.com/daetalys/searxng/issues/new
+  docs_url: https://docs.searxng.org
+  public_instances: https://searx.space
+  wiki_url: https://github.com/daetalys/searxng/wiki
+general:
+  debug: false
+  instance_name: "Search the Oracle"
+  # privacypolicy_url: false
+  donation_url: https://patreon.com/daetalys
+  contact_url: mailto:oracle@daetalytica.io
+  enable_metrics: true
+search:
+  safe_search: 0
+  autocomplete: "wikipedia"
