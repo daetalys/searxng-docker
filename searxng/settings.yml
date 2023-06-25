@@ -41,10 +41,10 @@ brand:
 general:
   debug: false
   instance_name: "Search the Oracle"
-  # privacypolicy_url: false
-  donation_url: https://patreon.com/daetalys
+  privacypolicy_url: https://daetalytica.io/ToS
+  donation_url: https://patreon.com/daetalytica
   contact_url: mailto:oracle@daetalytica.io
   enable_metrics: true
 search:
   safe_search: 0
-  autocomplete: "wikipedia"
+  autocomplete: "startpage"
